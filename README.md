@@ -6,7 +6,7 @@ its transmitted via UART to ESP32
 
 who saves the data in queue and in separate tasks publishes to MQTT broker
 
-local app on PC (in C#) reads the data
+app on PC (in C#) reads the data
 
 also local app sends another values grouped by colors: yellow & green
 
