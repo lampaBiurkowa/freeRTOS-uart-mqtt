@@ -35,10 +35,7 @@ void connectToWifi()
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(1000);
-    // SerialUart.println("Waiting for WiFi connection");
   }
-  //  SerialUart.println("Connected with ip: ");
-  //  SerialUart.println(WiFi.localIP());
 }
 
 void connectMqtt()
@@ -48,17 +45,13 @@ void connectMqtt()
   WiFi.mode(WIFI_STA);
   while (!client.connected())
   {
-   //SerialUart.println("Connecting to mqtt...");
     if (!client.connect(clientId))
     {
-  //  SerialUart.println("Failure code: ");
-  //  SerialUart.println(client.state());
       delay(1000);
     }
   }
   client.subscribe(yellowTopic);
   client.subscribe(greenTopic);
-  // SerialUart.println("connected");
 }
 
 void initializePins()
